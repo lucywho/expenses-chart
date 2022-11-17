@@ -1,12 +1,13 @@
-import logo from "./logo.svg"
+import MyBalance from "./components/myBalance"
+import VisualSummary from "./components/VisualSummary"
 
 function App() {
     return (
         <div className="App">
-            <img src={logo} alt="logo" />
-            My balance $921.48 Spending - Last 7 days mon tue wed thu fri sat
-            sun Total this month $478.33 +2.4% from last month
-            <div class="attribution">
+            <MyBalance />
+            <VisualSummary />
+
+            {/* <div class="attribution">
                 Challenge by{" "}
                 <a
                     href="https://www.frontendmentor.io?ref=challenge"
@@ -20,7 +21,7 @@ function App() {
                     @lucywho
                 </a>
                 .
-            </div>
+            </div> */}
         </div>
     )
 }

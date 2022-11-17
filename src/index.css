@@ -1,13 +1,104 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body,
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 18px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+.App {
+    background-color: hsl(27, 66%, 92%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-balance,
+.summary {
+    width: 40%;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 20px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px;
+    color: white;
+    height: fit-content;
+}
+
+.mb-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: fit-content;
+}
+
+.remaining-balance {
+    font-weight: bold;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+.vis-summary-wrapper {
+    width: 40%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 30px 0 30px;
+}
+
+.graph-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.graph {
+    border: lightgrey 1px solid;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+.summary {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.summary-text {
+    color: darkgray;
+}
+.summary-total {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.summary-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.variation {
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding-bottom: 5px;
 }
