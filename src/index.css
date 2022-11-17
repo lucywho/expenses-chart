@@ -1,3 +1,12 @@
+:root {
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
 body,
 * {
     margin: 0;
@@ -16,7 +25,7 @@ code {
 }
 
 .App {
-    background-color: hsl(27, 66%, 92%);
+    background-color: var(--Cream);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -27,13 +36,13 @@ code {
 .my-balance,
 .summary {
     width: 40%;
-    background-color: hsl(10, 79%, 65%);
+    background-color: var(--Soft-red);
     border-radius: 20px;
     margin: 0 auto 20px auto;
     display: flex;
     justify-content: space-between;
     padding: 25px 30px;
-    color: white;
+    color: var(--Very-pale-orange);
     height: fit-content;
 }
 
@@ -62,10 +71,10 @@ code {
 .graph-title {
     font-size: 1.25rem;
     font-weight: 700;
+    color: var(--Dark-brown);
 }
 
 .graph {
-    border: lightgrey 1px solid;
     height: 250px;
     display: flex;
     flex-direction: row;
@@ -74,16 +83,38 @@ code {
     padding-bottom: 10px;
 }
 
+.day-info {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    align-items: center;
+    color: var(--Medium-brown);
+}
+
+.bar {
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--Soft-red);
+}
+
+.big {
+    background-color: var(--Cyan);
+}
+
+.bar:hover {
+    opacity: 50%;
+}
+
 .summary {
     background-color: white;
-    color: black;
+    color: var(--Dark-brown);
     width: 100%;
     padding: 0;
     margin-top: 10px;
 }
 
 .summary-text {
-    color: darkgray;
+    color: var(--Medium-brown);
 }
 .summary-total {
     font-size: 2rem;
