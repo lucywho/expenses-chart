@@ -26,6 +26,7 @@ code {
 
 .App {
     background-color: var(--Cream);
+    height: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -33,9 +34,9 @@ code {
     align-items: center;
 }
 
-.my-balance,
-.summary {
+.my-balance {
     width: 40%;
+    width: 40vw;
     background-color: var(--Soft-red);
     border-radius: 20px;
     margin: 0 auto 20px auto;
@@ -54,28 +55,30 @@ code {
 }
 
 .remaining-balance {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 2rem;
     padding-top: 10px;
 }
 
 .vis-summary-wrapper {
     width: 40%;
+    height: fit-content;
     background-color: white;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 15px 30px 0 30px;
 }
 
 .graph-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--Dark-brown);
 }
 
 .graph {
-    height: 250px;
+    height: 300px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -112,7 +115,7 @@ code {
     border-radius: 5px;
     margin-bottom: 5px;
     font-size: 0.75rem;
-    font-weight: bold;
+    font-weight: 700;
     padding: 8px;
 }
 
@@ -120,8 +123,11 @@ code {
     background-color: white;
     color: var(--Dark-brown);
     width: 100%;
-    padding: 0;
-    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
 .summary-text {
@@ -141,6 +147,25 @@ code {
 
 .variation {
     font-weight: 700;
-    font-size: 0.75rem;
     padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 375px) {
+    .my-balance,
+    .vis-summary-wrapper {
+        width: 75%;
+        width: 75vw;
+    }
+
+    .remaining-balance {
+        font-size: 1.75rem;
+    }
+
+    .summary-text {
+        font-size: 0.9rem;
+    }
+
+    .summary-total {
+        font-size: 1.75rem;
+    }
 }
