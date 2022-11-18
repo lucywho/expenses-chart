@@ -1,20 +1,29 @@
-export default function BarItem(data) {
-    const height = data.amount * 3
+import { useCallback, useState } from "react"
 
-    //handle onfocus
+export default function BarItem(props) {
+    const [active, setActive] = useState(false)
+
+    const height = props.amount * 3
+
+    const handleOnFocus = useCallback(() => {
+        active ? setActive(false) : setActive(true)
+    }, [active])
 
     return (
         <div className="day-info">
-            {/* onFocus */}
-            <div className="day-total">{data.amount}</div>
+            {active && <div className="day-total">${props.amount}</div>}
             <div
-                className={data.biggest ? "bar big" : "bar"}
+                className={`bar ${props.biggest ? "big" : ""} ${
+                    active ? "active" : ""
+                }`}
                 style={{
                     height: `${height}px`,
-                    width: "100%",
                 }}
+                onMouseEnter={() => handleOnFocus()}
             ></div>
-            <div className="day">{data.day}</div>
+            <div className="day" style={{ minHeight: "1.3rem" }}>
+                {props.day}
+            </div>
         </div>
     )
 }

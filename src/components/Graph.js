@@ -1,17 +1,21 @@
-import BarItem from "./BarItem"
 import data from "../data.json"
+import BarItem from "./BarItem"
 
 export default function Graph() {
-    //calculate biggest amount and send info to BarItem as boolean
-    const calcBiggestAmount = (amount) => {
-        //do calc here, return true/false
+    const calcBiggestAmount = () => {
+        let amountArray = []
+        data.map((item) => {
+            amountArray.push(item.amount)
+            return amountArray
+        })
 
-        return amount === 52.36
+        return Math.max(...amountArray)
     }
 
-    const handleOnFocus = () => {
-        //set state of day-total here
+    const isBiggest = (amount) => {
+        return amount === calcBiggestAmount()
     }
+
     return (
         <div className="graph-wrapper">
             <p className="graph-title">Spending - Last 7 days</p>
@@ -21,8 +25,7 @@ export default function Graph() {
                         key={index}
                         day={item.day}
                         amount={item.amount}
-                        biggest={calcBiggestAmount(item.amount)}
-                        handleOnFocus={handleOnFocus}
+                        biggest={isBiggest(item.amount)}
                     />
                 ))}
             </div>
