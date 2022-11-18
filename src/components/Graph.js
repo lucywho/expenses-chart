@@ -25,7 +25,11 @@ export default function Graph() {
                         key={index}
                         day={item.day}
                         amount={item.amount}
-                        biggest={isBiggest(item.amount)}
+                        biggest={
+                            typeof isBiggest === "function"
+                                ? isBiggest(item.amount)
+                                : () => {}
+                        }
                     />
                 ))}
             </div>
