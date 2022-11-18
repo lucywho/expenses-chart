@@ -21,9 +21,7 @@ export default function BarItem(props) {
                 }}
                 onMouseEnter={() => handleOnFocus()}
             ></div>
-            <div className="day" style={{ minHeight: "1.3rem" }}>
-                {props.day}
-            </div>
+            <div className="day">{props.day}</div>
         </div>
     )
 }

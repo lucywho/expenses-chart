@@ -109,6 +109,13 @@ code {
     cursor: pointer;
 }
 
+.day {
+    min-height: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
 .day-total {
     background-color: var(--Dark-brown);
     color: var(--Very-pale-orange);
