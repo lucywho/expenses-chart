@@ -1,13 +1,19 @@
-import MyBalance from "./components/myBalance"
-import VisualSummary from "./components/VisualSummary"
+import MyBalance from "./components/myBalance";
+import VisualSummary from "./components/VisualSummary";
+
+/*
+ * If you're using a code formatter tool (e.g. Prettier),
+ * make sure to create a configuration file such that
+ * everyone working in the repo formats code in the same way
+ */
 
 function App() {
-    return (
-        <div className="App">
-            <MyBalance />
-            <VisualSummary />
+  return (
+    <div className="App">
+      <MyBalance />
+      <VisualSummary />
 
-            {/* <div class="attribution">
+      {/* <div class="attribution">
                 Challenge by{" "}
                 <a
                     href="https://www.frontendmentor.io?ref=challenge"
@@ -22,8 +28,8 @@ function App() {
                 </a>
                 .
             </div> */}
-        </div>
-    )
+    </div>
+  );
 }
 
-export default App
+export default App;
