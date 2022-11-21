@@ -1,5 +1,5 @@
-import MyBalance from "./components/myBalance";
-import VisualSummary from "./components/VisualSummary";
+import MyBalance from "./components/myBalance"
+import VisualSummary from "./components/VisualSummary"
 
 /*
  * If you're using a code formatter tool (e.g. Prettier),
@@ -8,12 +8,12 @@ import VisualSummary from "./components/VisualSummary";
  */
 
 function App() {
-  return (
-    <div className="App">
-      <MyBalance />
-      <VisualSummary />
+    return (
+        <div className="App">
+            <MyBalance />
+            <VisualSummary />
 
-      {/* <div class="attribution">
+            <div class="attribution">
                 Challenge by{" "}
                 <a
                     href="https://www.frontendmentor.io?ref=challenge"
@@ -27,9 +27,9 @@ function App() {
                     @lucywho
                 </a>
                 .
-            </div> */}
-    </div>
-  );
+            </div>
+        </div>
+    )
 }
 
-export default App;
+export default App
