@@ -1,12 +1,6 @@
 import MyBalance from "./components/myBalance"
 import VisualSummary from "./components/VisualSummary"
 
-/*
- * If you're using a code formatter tool (e.g. Prettier),
- * make sure to create a configuration file such that
- * everyone working in the repo formats code in the same way
- */
-
 function App() {
     return (
         <div className="App">
