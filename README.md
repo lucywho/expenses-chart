@@ -56,22 +56,16 @@ Users should be able to:
 
 ### What I learned
 
--   How to add multiple conditional classes to an element
--   How to use a calculated number to style the size of an element in CSS
-
-```js
-<div
-    className={`bar ${props.biggest ? "big" : ""} ${active ? "active" : ""}`}
-    style={{
-        height: `${height}px`,
-    }}
-></div>
-```
+-   adding multiple conditional classes to an element
+-   using a calculated number to style the size of an element in CSS
+-   interpreting an ambiguous static image into a user interface that acts in expected ways
+-   identifying constants and refactoring my code to calculating the same data repeatedly
 
 ### Continued development
 
--   How to create React apps in Typescript, particularly how to pass function calls in props
--   How to pre-check a json file to ensure that data is complete
+-   creating React apps in Typescript, particularly how to pass function calls in props
+-   pre-checking a json file to ensure that data is complete
+-   setting up a React app without CRA
 
 ## Author
 

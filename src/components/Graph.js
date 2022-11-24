@@ -3,7 +3,7 @@ import BarItem from "./BarItem"
 
 const biggestAmount = data.reduce(
     (prev, current) => Math.max(prev, current.amount),
-    Number.NEGATIVE_INFINITY
+    0
 )
 
 export default function Graph() {

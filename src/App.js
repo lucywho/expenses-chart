@@ -7,7 +7,7 @@ function App() {
             <MyBalance />
             <VisualSummary />
 
-            <div class="attribution">
+            <div className="attribution">
                 Challenge by{" "}
                 <a
                     href="https://www.frontendmentor.io?ref=challenge"
