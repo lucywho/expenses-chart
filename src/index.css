@@ -9,6 +9,11 @@
 
 body,
 * {
+    /*
+     * A good styling clean slate
+     * (e.g. nullify/normalize user agen stylesheets) can be achieved
+     * using a CSS reset/normalize stylesheet
+    */
     margin: 0;
     padding: 0;
     font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -16,7 +21,7 @@ body,
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 code {
@@ -35,6 +40,14 @@ code {
 }
 
 .my-balance {
+    /*
+     * We can lower the number of styling rules
+     * if we choose to keep this element from
+     * touching the edges of the `body` element
+     * by using a container for it & the graph below it.
+     * This would incur a change from `margin` on this element
+     * to `padding` on the parent element.
+     */
     background-color: var(--Soft-red);
     border-radius: 20px;
     display: flex;
@@ -43,6 +56,18 @@ code {
     justify-content: space-between;
     margin: 0 auto 20px auto;
     padding: 25px 30px;
+    /*
+     * CSS build time tooling can take
+     * care of transforming the CSS code
+     * such that it works on a specified set of
+     * browser versions. There's no need to take care
+     * of browser versions differences in the CSS source code
+     *
+     * It would increase the code simplicity
+     * if sizing things is done in a top-down
+     * manner (e.g. from bigger elements/blocks - containers,
+     * to chilren/grandchildren etc.)
+     */
     width: 40vw;
     width: 40%;
 }

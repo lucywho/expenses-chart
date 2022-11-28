@@ -4,8 +4,14 @@ import VisualSummary from "./components/VisualSummary"
 function App() {
     return (
         <div className="App">
-            <MyBalance />
-            <VisualSummary />
+
+            {/*
+              * Given the design features a max-width for the expenses chart,
+              * it would help to group the following two components under
+              * the same parent.
+              */}
+                <MyBalance />
+                <VisualSummary />
 
             <div className="attribution">
                 Challenge by{" "}
